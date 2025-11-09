@@ -1,9 +1,8 @@
 "use client";
-
+import React, { useState } from "react";
 import Link from "next/link";
 import vulnerabilitiesData from "@/data/vulnerabilities.json";
 
-import React, { useState } from "react";
 const validVulns = Array.isArray(vulnerabilitiesData)
   ? vulnerabilitiesData.filter(
       (it) =>

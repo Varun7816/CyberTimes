@@ -1,9 +1,8 @@
 "use client";
-
+import { useState, useMemo } from "react";
 import Link from "next/link";
 import jobs from "@/data/jobs.json";
 
-import React, { useMemo, useState } from "react";
 function parseDateDMY(s) {
   if (!s) return new Date(0);
   const parts = String(s).split("-"); // expect "dd-mm-yyyy"
