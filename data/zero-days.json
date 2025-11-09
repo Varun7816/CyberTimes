@@ -1,0 +1,1237 @@
+[
+  {
+    "metadata": {
+      "meta_title": "Critical Zero-Day Flaw in Cisco ASA and FTD: Immediate Action Needed for CVE-2025-20362",
+      "meta_description": "A missing authorization flaw (CVE-2025-20362) in Cisco ASA and FTD is being actively exploited. Immediate patching is required.",
+      "url_slug": "cisco-asa-ftd-zero-day-cve-2025-20362",
+      "date": "2025-09-25",
+      "primary_keywords": [
+        "Cisco ASA zero-day",
+        "CVE-2025-20362",
+        "Cisco FTD vulnerability",
+        "Missing Authorization exploit",
+        "VPN Web Server security",
+        "zero-day exploited in the wild"
+      ]
+    },
+    "article_content": {
+      "article_title": "Critical Zero-Day Flaw in Cisco ASA and FTD: Immediate Action Needed for CVE-2025-20362",
+      "sections": [
+        {
+          "heading": "Summary",
+          "content": "A missing authorization flaw (CVE-2025-20362) in Cisco ASA and FTD is being actively exploited in the wild. The flaw allows remote, unauthenticated attackers to bypass security checks and access restricted resources via a specially crafted HTTP request."
+        },
+        {
+          "heading": "Technical Details",
+          "content": "The vulnerability resides in the WebVPN feature’s server component. Improper input validation allows attackers to send malicious requests that bypass authorization, granting access to restricted URLs and resources."
+        },
+        {
+          "heading": "CVSS Details",
+          "content": "Base CVSSv3: Medium. However, unauthenticated exploitation in the wild elevates the severity to Critical. Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:N/E:H/RL:O/RC:C"
+        },
+        {
+          "heading": "Affected Products",
+          "content": "Cisco Adaptive Security Appliance (ASA), Cisco Firepower Threat Defense (FTD)"
+        },
+        {
+          "heading": "References",
+          "content": "Cisco advisory: https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-asaftd-webvpn-YROOTUW"
+        }
+      ]
+    }
+  },
+  {
+    "metadata": {
+      "meta_title": "Authenticated RCE Zero-Day in Cisco IOS XE SNMP: Urgent Alert for CVE-2025-20352",
+      "meta_description": "A stack-based buffer overflow (CVE-2025-20352) in Cisco IOS XE SNMP is being actively exploited, allowing authenticated remote code execution with root privileges.",
+      "url_slug": "cisco-ios-xe-snmp-rce-cve-2025-20352",
+      "date": "2025-09-24",
+      "primary_keywords": [
+        "Cisco IOS XE code execution",
+        "CVE-2025-20352",
+        "Stack-based buffer overflow SNMP",
+        "Authenticated remote exploit",
+        "IOS XE security vulnerability",
+        "SNMP buffer overflow zero-day"
+      ]
+    },
+    "article_content": {
+      "article_title": "Authenticated Remote Code Execution in Cisco IOS XE SNMP: Critical CVE-2025-20352 Alert",
+      "sections": [
+        {
+          "heading": "Summary",
+          "content": "A stack-based buffer overflow ($\text{CWE-121}$) in the Cisco IOS XE SNMP implementation ($\text{CVE-2025-20352}$) is a zero-day vulnerability actively exploited in the wild. An attacker with low-level network privileges can leverage this flaw to execute arbitrary code with root privileges."
+        },
+        {
+          "heading": "Technical Details",
+          "content": "The flaw is a boundary error within the SNMP subsystem. A remote, **authenticated user** exploits this by sending specially crafted SNMP packets that overflow a stack buffer, allowing them to gain root-level command execution on the affected device."
+        },
+        {
+          "heading": "CVSS Details",
+          "content": "CVSSv3 score is High, reflecting high impact on Confidentiality, Integrity, and Availability ($\text{C:H/I:H/A:H}$). The exploit is remotely triggerable and being actively used ($\text{E:H}$). Vector: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H/E:H/RL:O/RC:C"
+        },
+        {
+          "heading": "Affected Products",
+          "content": "Cisco IOS XE (specifically, components related to the SNMP subsystem)."
+        },
+        {
+          "heading": "References",
+          "content": "Cisco advisory: https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-snmp-x4LPhte"
+        }
+      ]
+    }
+  },
+  {
+  "metadata": {
+    "meta_title": "Actively Exploited Qualcomm Firmware Vulnerability (CVE-2025-21480): Incorrect Authorization Risk",
+    "meta_description": "A critical Qualcomm firmware flaw (CVE-2025-21480) allows remote code execution via improper input validation in Graphics Windows. The vulnerability is being actively exploited in the wild.",
+    "url_slug": "qualcomm-firmware-cve-2025-21480",
+    "date": "2025-06-02",
+    "primary_keywords": [
+      "Qualcomm firmware vulnerability",
+      "CVE-2025-21480",
+      "Qualcomm zero-day",
+      "Incorrect authorization CWE-863",
+      "Qualcomm remote code execution",
+      "Qualcomm chipset security flaw"
+    ]
+  },
+  "article_content": {
+    "article_title": "Qualcomm Firmware Zero-Day (CVE-2025-21480) Actively Exploited: Incorrect Authorization Leads to Remote Code Execution",
+    "sections": [
+      {
+        "heading": "Summary",
+        "content": "A high-severity vulnerability ($\\text{CVE-2025-21480}$) has been discovered in Qualcomm firmware, categorized under Incorrect Authorization ($\\text{CWE-863}$). The flaw allows a remote attacker to execute arbitrary code on affected devices. Qualcomm has confirmed that the vulnerability is being actively exploited in the wild."
+      },
+      {
+        "heading": "Technical Details",
+        "content": "The issue resides in the **Graphics Windows** component of Qualcomm firmware, where improper input validation leads to unauthorized execution paths. A remote attacker can exploit this flaw by **tricking a victim into opening a specially crafted file**, triggering arbitrary code execution with high privileges."
+      },
+      {
+        "heading": "CVSS Details",
+        "content": "The CVSS v3.1 vector is **CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H/E:H/RL:O/RC:C**, indicating a **High severity** vulnerability. It requires minimal attacker effort (low complexity) and can fully compromise confidentiality, integrity, and availability."
+      },
+      {
+        "heading": "Impact",
+        "content": "Successful exploitation could allow remote code execution, potentially giving attackers full control over the device firmware. This poses severe risks for smartphones and IoT devices using Qualcomm chipsets, as attackers could execute system-level commands or implant persistent malware."
+      },
+      {
+        "heading": "Mitigation & Recommendations",
+        "content": "Users and OEMs should immediately **apply Qualcomm’s June 2025 security patches**. Avoid opening untrusted files or links until updates are deployed. Enterprises managing Qualcomm-based devices should implement additional monitoring for unusual process execution or network activity."
+      },
+      {
+        "heading": "References",
+        "content": "Qualcomm Security Bulletin – June 2025: https://docs.qualcomm.com/product/publicresources/securitybulletin/june-2025-bulletin.html"
+      }
+    ]
+  }
+},
+{
+  "metadata": {
+    "meta_title": "Google Chrome Zero-Day (CVE-2025-5419): Out-of-Bounds Write in V8 Engine Actively Exploited",
+    "meta_description": "A high-severity Chrome zero-day (CVE-2025-5419) in the V8 JavaScript engine enables remote code execution via an out-of-bounds write flaw. Actively exploited in the wild — update immediately.",
+    "url_slug": "google-chrome-v8-out-of-bounds-cve-2025-5419",
+    "date": "2025-06-03",
+    "primary_keywords": [
+      "Google Chrome zero-day",
+      "CVE-2025-5419",
+      "Chrome V8 vulnerability",
+      "Out-of-bounds write CWE-787",
+      "Chrome remote code execution",
+      "Chrome exploit June 2025"
+    ]
+  },
+  "article_content": {
+    "article_title": "Actively Exploited Google Chrome Zero-Day (CVE-2025-5419) Discovered in V8 Engine",
+    "sections": [
+      {
+        "heading": "Summary",
+        "content": "Google has released an urgent fix for a **high-severity vulnerability (CVE-2025-5419)** in the **V8 JavaScript engine** used by Chrome. The flaw, classified under **Out-of-Bounds Write (CWE-787)**, allows remote code execution when users visit maliciously crafted websites. The issue is confirmed to be **actively exploited in the wild**."
+      },
+      {
+        "heading": "Technical Details",
+        "content": "The vulnerability stems from a **boundary error in the V8 JavaScript engine**, where improper memory handling during object processing can cause a write operation outside the allocated buffer. An attacker can craft a specially designed webpage that triggers this flaw, enabling arbitrary code execution on the target system with the victim’s browser privileges."
+      },
+      {
+        "heading": "CVSS Details",
+        "content": "CVSS v3.1 vector: **CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H/E:H/RL:O/RC:C**, indicating **High severity**. The attack is remotely exploitable, requires minimal complexity, and compromises all three CIA triad pillars — Confidentiality, Integrity, and Availability."
+      },
+      {
+        "heading": "Impact",
+        "content": "Successful exploitation can allow attackers to **take control of the victim’s system**, install malware, steal data, or perform unauthorized actions. Because the attack is triggered simply by visiting a compromised or malicious website, the exposure risk is extremely high for all Chrome users across Windows, macOS, and Linux."
+      },
+      {
+        "heading": "Mitigation & Recommendations",
+        "content": "Google recommends all users **update Chrome to the latest stable version immediately**. To ensure safety: \n1. Navigate to `chrome://settings/help` to trigger an update. \n2. Restart the browser after updating. \n3. Enable automatic updates if disabled. \n\nEnterprises using managed devices should roll out updates across systems via the admin console. Users should also remain cautious of unsolicited links or suspicious websites until patches are fully deployed."
+      },
+      {
+        "heading": "References",
+        "content": "Google Chrome Security Bulletin – June 2025: https://chromereleases.googleblog.com/2025/06/stable-channel-update-for-desktop.html"
+      }
+    ]
+  }
+},
+{
+  "metadata": {
+    "meta_title": "Citrix NetScaler Gateway Zero-Day (CVE-2025-6543): Memory Corruption Bug Causes Remote DoS",
+    "meta_description": "A zero-day in Citrix NetScaler Gateway (CVE-2025-6543) allows remote attackers to trigger memory corruption and cause denial of service. Actively exploited in the wild — patch immediately.",
+    "url_slug": "citrix-netscaler-gateway-cve-2025-6543",
+    "date": "2025-06-26",
+    "primary_keywords": [
+      "Citrix NetScaler zero-day",
+      "CVE-2025-6543",
+      "Citrix memory corruption",
+      "Buffer overflow CWE-119",
+      "NetScaler denial of service",
+      "Citrix ADC vulnerability"
+    ]
+  },
+  "article_content": {
+    "article_title": "Citrix NetScaler Gateway Zero-Day (CVE-2025-6543) Exploited in the Wild – Memory Corruption Leads to DoS",
+    "sections": [
+      {
+        "heading": "Summary",
+        "content": "A newly identified zero-day vulnerability ($\\text{CVE-2025-6543}$) in **Citrix NetScaler Gateway and NetScaler ADC** allows remote attackers to cause a **Denial of Service (DoS)** condition. The flaw, rooted in a **memory corruption issue (CWE-119)**, is confirmed to be **actively exploited in the wild**."
+      },
+      {
+        "heading": "Technical Details",
+        "content": "The vulnerability stems from a **boundary error when handling incoming network requests**. A remote, unauthenticated attacker can send specially crafted traffic to a vulnerable Citrix NetScaler device, causing **memory corruption** that leads to a service crash or reboot. The issue affects systems configured as a **Gateway (VPN virtual server, ICA Proxy, CVPN, RDP Proxy)** or **AAA virtual server**."
+      },
+      {
+        "heading": "CVSS Details",
+        "content": "CVSS v3.1 vector: **CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H/E:H/RL:O/RC:C**, representing a **High-severity** remote vulnerability. It can be exploited over the network without authentication or user interaction, resulting in complete service disruption."
+      },
+      {
+        "heading": "Impact",
+        "content": "Successful exploitation allows attackers to **crash the NetScaler Gateway service**, leading to outages for VPN or remote access users. While this flaw does not enable code execution, its ability to **remotely disrupt business-critical infrastructure** makes it a high-risk issue for enterprises relying on Citrix ADC for secure connectivity."
+      },
+      {
+        "heading": "Mitigation & Recommendations",
+        "content": "Citrix recommends administrators to **apply the latest patches** as outlined in advisory **SB2025062606**. Until updates are deployed: \n1. Restrict external access to NetScaler management and Gateway interfaces.\n2. Implement rate-limiting or firewall rules to detect and block abnormal request patterns.\n3. Continuously monitor system logs for repeated connection resets or gateway service crashes.\n\nEnterprises using NetScaler ADC for VPN or AAA services should prioritize this patch as a **critical update**."
+      },
+      {
+        "heading": "References",
+        "content": "Citrix Security Advisory – Remote DoS in NetScaler Gateway and ADC: https://support.citrix.com/support-home/kbsearch/article?articleNumber=CTX694788"
+      }
+    ]
+  }
+},
+{
+  "metadata": {
+    "meta_title": "Supply Chain Attack: eslint-config-prettier Backdoor (CVE-2025-54313) Targets Windows Users",
+    "meta_description": "A malicious version of eslint-config-prettier (CVE-2025-54313) embeds backdoor code due to a maintainer account compromise. The attack affects Windows installations — update immediately.",
+    "url_slug": "eslint-config-prettier-backdoor-cve-2025-54313",
+    "date": "2025-07-18",
+    "primary_keywords": [
+      "eslint-config-prettier backdoor",
+      "CVE-2025-54313",
+      "npm supply chain attack",
+      "CWE-506 embedded malicious code",
+      "Prettier compromise",
+      "JavaScript package vulnerability"
+    ]
+  },
+  "article_content": {
+    "article_title": "Zero-Day Supply Chain Attack: Backdoored eslint-config-prettier (CVE-2025-54313) Actively Targeting Windows Systems",
+    "sections": [
+      {
+        "heading": "Summary",
+        "content": "A critical **supply chain compromise (CVE-2025-54313)** has been identified in the **eslint-config-prettier** package, following the compromise of the maintainer’s npm account on **July 18, 2025**. The malicious version contained **embedded backdoor code (CWE-506)**, allowing attackers to gain unauthorized access to systems where the package was installed."
+      },
+      {
+        "heading": "Technical Details",
+        "content": "The attack involves **malicious code injected into the eslint-config-prettier npm package**, distributed through the official npm registry. When executed, the code established unauthorized network connections, allowing remote attackers to **exfiltrate sensitive data or execute commands** on the compromised system. The payload appears to specifically target **Microsoft Windows installations**, limiting impact on other operating systems."
+      },
+      {
+        "heading": "CVSS Details",
+        "content": "CVSS v3.1 vector: **CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H/E:H/RL:O/RC:C**, rated as **High severity**. The vulnerability requires no privileges or user interaction and can fully compromise system confidentiality, integrity, and availability."
+      },
+      {
+        "heading": "Impact",
+        "content": "Systems that installed the compromised eslint-config-prettier version are **vulnerable to remote takeover**. Attackers could gain access to local development environments, leak credentials, or tamper with code repositories. This incident underscores the **growing risk of open-source supply chain attacks**, where trusted libraries are weaponized through account compromises."
+      },
+      {
+        "heading": "Mitigation & Recommendations",
+        "content": "1. **Immediately uninstall** any recent versions of eslint-config-prettier installed or updated on or after **July 18, 2025**.\n2. **Verify package integrity** using npm audit and cross-check versions against known-safe releases.\n3. **Rotate credentials** and tokens that may have been exposed in development environments.\n4. Follow advisories from npm and GitHub security teams for updated package hashes.\n5. Limit npm install permissions to reduce risk from future supply-chain compromises."
+      },
+      {
+        "heading": "References",
+        "content": "Endor Labs Security Analysis: https://www.endorlabs.com/learn/cve-2025-54313-eslint-config-prettier-compromise----high-severity-but-windows-only\n\nStepSecurity Blog – Supply Chain Security Alert: https://www.stepsecurity.io/blog/supply-chain-security-alert-eslint-config-prettier-package-shows-signs-of-compromise"
+      }
+    ]
+  }
+},
+{
+  "metadata": {
+    "meta_title": "Zero-Day in Microsoft SharePoint Server (CVE-2025-53770) Enables Remote Code Execution",
+    "meta_description": "A critical zero-day flaw (CVE-2025-53770) in Microsoft SharePoint Server allows remote code execution via deserialization of untrusted data. The vulnerability is actively exploited — patch immediately.",
+    "url_slug": "microsoft-sharepoint-server-zero-day-cve-2025-53770",
+    "date": "2025-07-21",
+    "primary_keywords": [
+      "CVE-2025-53770",
+      "Microsoft SharePoint Server zero-day",
+      "remote code execution vulnerability",
+      "CWE-502 deserialization of untrusted data",
+      "SharePoint RCE exploit",
+      "Microsoft zero-day 2025"
+    ]
+  },
+  "article_content": {
+    "article_title": "Microsoft SharePoint Server Zero-Day (CVE-2025-53770) Exploited in the Wild for Remote Code Execution",
+    "sections": [
+      {
+        "heading": "Summary",
+        "content": "A newly discovered **zero-day vulnerability (CVE-2025-53770)** in **Microsoft SharePoint Server** is under active exploitation, allowing remote attackers to execute arbitrary code on unpatched systems. The flaw stems from a **deserialization of untrusted data (CWE-502)** issue that enables code injection during object deserialization. Microsoft has acknowledged active attacks and released mitigations under advisory **SB2025072001**."
+      },
+      {
+        "heading": "Technical Details",
+        "content": "The vulnerability arises from **improper validation of serialized input** within SharePoint’s data handling mechanism. An unauthenticated attacker can send **specially crafted serialized data** to the application, triggering unsafe deserialization that leads to **remote code execution (RCE)** on the target system. This type of attack can grant complete control of the affected server, allowing lateral movement or data exfiltration within enterprise networks."
+      },
+      {
+        "heading": "CVSS and Severity",
+        "content": "CVSS v3.1 vector: **CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H/E:H/RL:O/RC:C**, categorized as **Critical**. The exploit requires no authentication or user interaction, giving attackers a low barrier to entry and high potential for damage."
+      },
+      {
+        "heading": "Impact",
+        "content": "Successful exploitation may lead to **complete compromise of SharePoint servers**, including unauthorized access, data modification, or deployment of persistent malware. Given SharePoint’s role in enterprise collaboration, exploitation could expose internal documents, credentials, and sensitive communications. Threat actors have been observed using this zero-day as part of broader intrusion campaigns targeting corporate and government networks."
+      },
+      {
+        "heading": "Mitigation and Recommendations",
+        "content": "1. **Apply Microsoft’s latest security updates** as per advisory [CVE-2025-53770](https://msrc.microsoft.com/update-guide/en-US/advisory/CVE-2025-53770).\n2. **Restrict external access** to SharePoint web applications until patches are confirmed.\n3. **Monitor logs** for suspicious deserialization activity or anomalous PowerShell executions.\n4. Implement **application-level input validation** to prevent unsafe data deserialization.\n5. Use **network segmentation and EDR monitoring** to detect potential lateral movement."
+      },
+      {
+        "heading": "References",
+        "content": "Microsoft Security Advisory: https://msrc.microsoft.com/update-guide/en-US/advisory/CVE-2025-53770"
+      }
+    ]
+  }
+},
+{
+  "metadata": {
+    "meta_title": "WinRAR Zero-Day (CVE-2025-8088) Exploited in the Wild — Path Traversal to Remote Code Execution",
+    "meta_description": "A critical zero-day vulnerability (CVE-2025-8088) in WinRAR allows remote attackers to perform path traversal leading to remote code execution. Actively exploited in the wild — update immediately.",
+    "url_slug": "winrar-zero-day-cve-2025-8088-path-traversal-rce",
+    "date": "2025-07-30",
+    "primary_keywords": [
+      "CVE-2025-8088",
+      "WinRAR zero-day",
+      "WinRAR path traversal",
+      "remote code execution vulnerability",
+      "CWE-22",
+      "WinRAR exploit 2025",
+      "WinRAR security update"
+    ]
+  },
+  "article_content": {
+    "article_title": "Critical WinRAR Zero-Day (CVE-2025-8088) Exploited in the Wild — Path Traversal Enables Remote Code Execution",
+    "sections": [
+      {
+        "heading": "Summary",
+        "content": "A **zero-day vulnerability (CVE-2025-8088)** in **WinRAR**, the popular file archiver utility, has been actively exploited in real-world attacks. The flaw allows attackers to perform **path traversal** and potentially achieve **remote code execution (RCE)** when victims open specially crafted archive files. According to advisory **SB2025080901**, this vulnerability is being leveraged by threat actors in targeted phishing campaigns."
+      },
+      {
+        "heading": "Technical Details",
+        "content": "The vulnerability is rooted in **improper validation of directory traversal sequences** (CWE-22) within WinRAR’s archive extraction process. By embedding crafted file paths such as `../` within archive contents, an attacker can **overwrite arbitrary files** on the victim’s system outside of the intended extraction directory. If exploited, this can lead to **execution of malicious payloads** upon opening the archive or after system reboot."
+      },
+      {
+        "heading": "CVSS and Severity",
+        "content": "CVSS v3.1 Vector: **CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H/E:H/RL:O/RC:C** — rated **Critical**. Exploitation requires user interaction (opening the malicious archive), but the attack complexity is low and leads to complete system compromise."
+      },
+      {
+        "heading": "Impact",
+        "content": "Successful exploitation enables attackers to **overwrite system files, inject malware, or gain persistent access**. Cybercriminal groups, including **RomCom**, have been observed exploiting this zero-day through phishing emails containing weaponized archive files disguised as legitimate documents. The campaign primarily targets enterprises and government agencies, underscoring the severity of the flaw."
+      },
+      {
+        "heading": "Mitigation and Recommendations",
+        "content": "1. **Update to the latest WinRAR version immediately** — patches are available via the official [WinRAR Security Update](https://www.win-rar.com/singlenewsview.html?&L=0&tx_ttnews%5Btt_news%5D=283&cHash=a64b4a8f662d3639dec8d65f47bc93c5).\n2. **Avoid opening unknown or suspicious archives**, especially those received via email.\n3. **Enable file extension visibility** in Windows Explorer to prevent hidden file type spoofing.\n4. Use **endpoint detection and response (EDR)** solutions capable of detecting archive-based exploits.\n5. **Educate users** about phishing campaigns distributing weaponized archive files."
+      },
+      {
+        "heading": "References",
+        "content": "• BleepingComputer Report: https://www.bleepingcomputer.com/news/security/winrar-zero-day-flaw-exploited-by-romcom-hackers-in-phishing-attacks/\n• WinRAR Official Advisory: https://www.win-rar.com/singlenewsview.html?&L=0&tx_ttnews%5Btt_news%5D=283&cHash=a64b4a8f662d3639dec8d65f47bc93c5"
+      }
+    ]
+  }
+},
+{
+  "metadata": {
+    "meta_title": "Trend Micro Apex One Zero-Day (CVE-2025-54948) — OS Command Injection Enables Remote Code Execution",
+    "meta_description": "A critical OS command injection vulnerability (CVE-2025-54948) in Trend Micro Apex One allows unauthenticated remote attackers to execute arbitrary code via the management console. Actively exploited zero-day — patch immediately.",
+    "url_slug": "trend-micro-apex-one-zero-day-cve-2025-54948-os-command-injection",
+    "date": "2025-08-05",
+    "primary_keywords": [
+      "CVE-2025-54948",
+      "Trend Micro Apex One vulnerability",
+      "Apex One zero-day exploit",
+      "OS command injection",
+      "remote code execution",
+      "Trend Micro security advisory",
+      "CWE-78"
+    ]
+  },
+  "article_content": {
+    "article_title": "Trend Micro Apex One Zero-Day (CVE-2025-54948): OS Command Injection Enables Unauthenticated RCE",
+    "sections": [
+      {
+        "heading": "Summary",
+        "content": "A **zero-day vulnerability (CVE-2025-54948)** in **Trend Micro Apex One** has been discovered and is actively exploited in the wild. The flaw, tracked under **CWE-78 (OS Command Injection)**, allows unauthenticated remote attackers to execute arbitrary commands on affected systems via the management console. According to **advisory SB2025080616**, this issue poses a critical risk to enterprise environments running Apex One."
+      },
+      {
+        "heading": "Technical Details",
+        "content": "The vulnerability stems from **improper input validation** within the **Apex One management console**. An attacker can send specially crafted HTTP requests containing malicious payloads that are not properly sanitized before being passed to system command functions. This results in arbitrary command execution with the privileges of the web service process — effectively granting **remote code execution (RCE)** without authentication."
+      },
+      {
+        "heading": "CVSS and Severity",
+        "content": "CVSS v3.1 Vector: **CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H/E:H/RL:O/RC:C** — rated **Critical (9.8)**. Exploitation requires no authentication or user interaction, making it ideal for automated mass exploitation attempts."
+      },
+      {
+        "heading": "Impact",
+        "content": "Successful exploitation allows attackers to gain **full remote access**, deploy malware, exfiltrate data, or pivot laterally within the network. Security researchers have confirmed **active exploitation**, suggesting that the flaw is already being leveraged to compromise vulnerable enterprise systems running exposed management consoles."
+      },
+      {
+        "heading": "Mitigation and Recommendations",
+        "content": "1. **Apply the latest patches** released by Trend Micro immediately — available through the official [Trend Micro Advisory](https://success.trendmicro.com/en-US/solution/KA-0020652).\n2. **Restrict network access** to the Apex One management console to trusted internal hosts only.\n3. **Monitor logs and system activity** for suspicious commands or web traffic.\n4. **Implement WAF rules** to block malicious HTTP request patterns targeting command injection.\n5. **Enable multi-layered endpoint protection** to detect post-exploitation activities such as file drops or privilege escalation attempts."
+      },
+      {
+        "heading": "References",
+        "content": "• Trend Micro Official Advisory: https://success.trendmicro.com/en-US/solution/KA-0020652"
+      }
+    ]
+  }
+},
+{
+  "metadata": {
+    "meta_title": "FortiSIEM Zero-Day (CVE-2025-25256): OS Command Injection Actively Exploited in the Wild",
+    "meta_description": "A critical zero-day (CVE-2025-25256) in FortiSIEM allows unauthenticated remote attackers to execute arbitrary commands via OS command injection. Exploited in the wild — patch immediately.",
+    "url_slug": "fortisiem-zero-day-cve-2025-25256-os-command-injection",
+    "date": "2025-08-12",
+    "primary_keywords": [
+      "CVE-2025-25256",
+      "FortiSIEM zero-day",
+      "Fortinet vulnerability",
+      "OS command injection",
+      "remote code execution",
+      "FortiSIEM exploit",
+      "CWE-78"
+    ]
+  },
+  "article_content": {
+    "article_title": "FortiSIEM Zero-Day (CVE-2025-25256): Critical OS Command Injection Exploited in the Wild",
+    "sections": [
+      {
+        "heading": "Summary",
+        "content": "A **critical zero-day vulnerability (CVE-2025-25256)** has been discovered in **Fortinet’s FortiSIEM** platform, allowing **unauthenticated remote attackers** to execute arbitrary system commands via OS command injection. This flaw is actively exploited in the wild and poses a serious threat to organizations using unpatched FortiSIEM deployments. The issue is documented in advisory **SB20250812104** and classified under **CWE-78: Improper Neutralization of Special Elements used in an OS Command**."
+      },
+      {
+        "heading": "Technical Details",
+        "content": "The vulnerability arises from **improper sanitization of input parameters** within the FortiSIEM interface. Attackers can send specially crafted **CLI or HTTP requests** containing malicious command sequences that the application executes with system-level privileges. As authentication is not required, this flaw can be weaponized to achieve **remote code execution (RCE)**, data exfiltration, or complete server takeover."
+      },
+      {
+        "heading": "CVSS and Severity",
+        "content": "CVSS v3.1 Vector: **CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H/E:H/RL:O/RC:C** — rated **Critical (9.8)**. The vulnerability requires no prior access or user interaction, making it ideal for mass exploitation through automated scanning and exploit kits."
+      },
+      {
+        "heading": "Impact",
+        "content": "Exploitation of this zero-day enables attackers to fully **compromise FortiSIEM servers**, manipulate monitoring data, deploy backdoors, and pivot to internal assets. Given FortiSIEM’s role as a centralized security management system, exploitation may also grant visibility into sensitive network configurations and event data — significantly amplifying the potential damage."
+      },
+      {
+        "heading": "Mitigation and Recommendations",
+        "content": "1. **Immediately update to the latest FortiSIEM patch** provided by Fortinet via the official [FortiGuard Advisory](https://www.fortiguard.com/psirt/FG-IR-25-152).\n2. **Restrict access** to FortiSIEM interfaces from untrusted networks.\n3. **Monitor logs** for suspicious command executions or unusual CLI activity.\n4. **Segment critical servers** to prevent lateral movement post-compromise.\n5. **Implement web application firewalls (WAF)** capable of detecting command injection attempts."
+      },
+      {
+        "heading": "References",
+        "content": "• Fortinet PSIRT Advisory: https://www.fortiguard.com/psirt/FG-IR-25-152"
+      }
+    ]
+  }
+},
+{
+  "metadata": {
+    "meta_title": "Apple iOS Zero-Day (CVE-2025-43300) Exploited in the Wild — Out-of-Bounds Write in ImageIO",
+    "meta_description": "A critical zero-day (CVE-2025-43300) in Apple iOS and iPadOS 18 allows remote attackers to execute arbitrary code via out-of-bounds write in the ImageIO subsystem. Actively exploited — update devices immediately.",
+    "url_slug": "apple-ios-ipados-zero-day-cve-2025-43300-imageio",
+    "date": "2025-08-20",
+    "primary_keywords": [
+      "Apple iOS zero-day",
+      "CVE-2025-43300",
+      "iPadOS ImageIO vulnerability",
+      "Out-of-bounds write",
+      "Remote code execution",
+      "iOS security update 2025",
+      "CWE-787"
+    ]
+  },
+  "article_content": {
+    "article_title": "Apple iOS and iPadOS Zero-Day (CVE-2025-43300): Out-of-Bounds Write in ImageIO Actively Exploited",
+    "sections": [
+      {
+        "heading": "Summary",
+        "content": "A **critical zero-day vulnerability (CVE-2025-43300)** affects **Apple iOS 18 and iPadOS 18**, enabling remote attackers to execute arbitrary code via a specially crafted image file. The flaw originates from an **out-of-bounds write (CWE-787)** in the **ImageIO subsystem**, allowing exploitation when a user opens a malicious image. The vulnerability is **actively exploited in the wild**, making immediate action essential."
+      },
+      {
+        "heading": "Technical Details",
+        "content": "The vulnerability occurs due to **boundary errors when processing untrusted image input** within ImageIO. An attacker can craft an image file that triggers an out-of-bounds memory write, enabling **remote code execution (RCE)**. Exploitation requires that the victim opens the malicious image on an unpatched device. This type of memory corruption could allow attackers to execute arbitrary commands with system privileges."
+      },
+      {
+        "heading": "CVSS and Severity",
+        "content": "CVSS v3.1 Vector: **CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H/E:H/RL:O/RC:C** — rated **Critical (9.8)**. The attack is remotely exploitable with low complexity and requires minimal user interaction, posing a high risk for targeted and widespread attacks."
+      },
+      {
+        "heading": "Impact",
+        "content": "Successful exploitation could lead to **full device compromise**, including installation of malware, theft of sensitive data, and unauthorized access to applications and system functions. Since the attack requires only opening a malicious image, the threat extends to enterprise and personal users alike."
+      },
+      {
+        "heading": "Mitigation and Recommendations",
+        "content": "1. **Update devices immediately** to the latest iOS/iPadOS security release as per Apple advisory [CVE-2025-43300](https://support.apple.com/en-us/124925).\n2. **Do not open images from unknown sources** or untrusted messages.\n3. **Enable automatic iOS updates** to ensure timely patching.\n4. **Monitor device behavior** for signs of compromise such as unusual network activity or app crashes.\n5. For organizations, **restrict installation of unverified apps and enforce device management policies**."
+      },
+      {
+        "heading": "References",
+        "content": "Apple Security Update Advisory: https://support.apple.com/en-us/124925"
+      }
+    ]
+  }
+},
+{
+  "metadata": {
+    "meta_title": "FreePBX Zero-Day (CVE-2025-57819) — SQL Injection Actively Exploited in the Wild",
+    "meta_description": "A critical zero-day (CVE-2025-57819) in FreePBX allows remote attackers to execute arbitrary SQL commands via SQL injection. Actively exploited since August 21, 2025 — patch immediately.",
+    "url_slug": "freepbx-zero-day-cve-2025-57819-sql-injection",
+    "date": "2025-08-29",
+    "primary_keywords": [
+      "CVE-2025-57819",
+      "FreePBX zero-day",
+      "SQL injection vulnerability",
+      "remote code execution",
+      "CWE-89",
+      "FreePBX security update",
+      "FreePBX exploit 2025"
+    ]
+  },
+  "article_content": {
+    "article_title": "FreePBX Zero-Day (CVE-2025-57819): SQL Injection Vulnerability Actively Exploited",
+    "sections": [
+      {
+        "heading": "Summary",
+        "content": "A **critical zero-day vulnerability (CVE-2025-57819)** affects **FreePBX**, enabling remote attackers to execute arbitrary SQL commands due to insufficient sanitization of user-supplied data. The vulnerability, classified under **CWE-89 (SQL Injection)**, has been **actively exploited in the wild** since August 21, 2025, potentially leading to full system compromise."
+      },
+      {
+        "heading": "Technical Details",
+        "content": "The flaw exists within the **endpoint module** of FreePBX. An attacker can send **specially crafted requests** that manipulate SQL queries executed by the application. Exploitation can allow attackers to **read, modify, or delete database records**, bypass authentication, and gain administrative access. This type of SQL injection can be leveraged to deploy further malware or pivot to other systems in the network."
+      },
+      {
+        "heading": "CVSS and Severity",
+        "content": "CVSS v3.1 Vector: **CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H/E:H/RL:O/RC:C** — rated **Critical (9.8)**. The vulnerability is remotely exploitable without authentication, requiring no user interaction, making it highly dangerous in public-facing deployments."
+      },
+      {
+        "heading": "Impact",
+        "content": "Successful exploitation allows attackers to **fully compromise FreePBX servers**, including access to call logs, user credentials, and system configurations. Attackers may also leverage the compromise to move laterally within enterprise telephony networks, intercept calls, or deploy persistent backdoors."
+      },
+      {
+        "heading": "Mitigation and Recommendations",
+        "content": "1. **Update FreePBX to the latest patched version** as per the [official advisory](https://github.com/FreePBX/security-reporting/security/advisories/GHSA-m42g-xg4c-5f3h).\n2. **Restrict access** to FreePBX management interfaces to trusted internal networks.\n3. **Monitor database logs** for suspicious SQL queries or repeated injection attempts.\n4. **Implement WAF or IDS/IPS rules** to detect SQL injection patterns.\n5. **Perform regular backups** of critical databases and configuration files to recover quickly from potential compromise."
+      },
+      {
+        "heading": "References",
+        "content": "FreePBX Security Advisory: https://github.com/FreePBX/security-reporting/security/advisories/GHSA-m42g-xg4c-5f3h"
+      }
+    ]
+  }
+},
+{
+  "metadata": {
+    "meta_title": "WhatsApp for Mac Zero-Day (CVE-2025-55177) — Improper Authorization Actively Exploited",
+    "meta_description": "A critical zero-day (CVE-2025-55177) in WhatsApp for Mac allows remote attackers to exploit improper authorization in linked device sync, leading to compromise. Actively exploited in the wild alongside CVE-2025-43300.",
+    "url_slug": "whatsapp-mac-zero-day-cve-2025-55177-improper-authorization",
+    "date": "2025-08-31",
+    "primary_keywords": [
+      "CVE-2025-55177",
+      "WhatsApp for Mac zero-day",
+      "Improper authorization vulnerability",
+      "remote code execution",
+      "CWE-285",
+      "WhatsApp security update",
+      "WhatsApp exploit 2025"
+    ]
+  },
+  "article_content": {
+    "article_title": "WhatsApp for Mac Zero-Day (CVE-2025-55177): Improper Authorization Vulnerability Actively Exploited",
+    "sections": [
+      {
+        "heading": "Summary",
+        "content": "A **critical zero-day vulnerability (CVE-2025-55177)** affects **WhatsApp for Mac**, allowing remote attackers to exploit **improper authorization** in linked device synchronization. The vulnerability enables attackers to force the application to process content from arbitrary URLs on a target device. This flaw is **actively exploited in the wild**, often in conjunction with **CVE-2025-43300** (#VU114314), highlighting its severity."
+      },
+      {
+        "heading": "Technical Details",
+        "content": "The vulnerability stems from **improper authorization checks** in the linked device synchronization feature of WhatsApp. By sending specially crafted synchronization messages, a remote attacker can trick the application into fetching and processing content from attacker-controlled URLs. While this vulnerability does not directly allow remote code execution, it can lead to **data manipulation, information disclosure, and potential compromise of sensitive user content**."
+      },
+      {
+        "heading": "CVSS and Severity",
+        "content": "CVSS v3.1 Vector: **CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:H/A:N/E:H/RL:O/RC:C** — rated **High (8.8)**. The attack requires minimal user interaction (clicking or opening a sync message), but the potential impact on integrity is significant."
+      },
+      {
+        "heading": "Impact",
+        "content": "Successful exploitation can result in **tampering with synchronized messages, unauthorized content processing, and potential data integrity issues**. Combined with other vulnerabilities like **CVE-2025-43300**, attackers may achieve broader compromise of macOS systems using WhatsApp."
+      },
+      {
+        "heading": "Mitigation and Recommendations",
+        "content": "1. **Update WhatsApp for Mac immediately** using the official [Facebook Security Advisory](https://www.facebook.com/security/advisories/cve-2025-55177).\n2. **Avoid opening unknown links or sync requests** from untrusted devices.\n3. **Monitor synchronized devices** and remove unknown linked devices.\n4. **Enable two-factor authentication** for WhatsApp accounts to prevent unauthorized linkage.\n5. Enterprises should **review endpoint security policies** for applications that sync sensitive data."
+      },
+      {
+        "heading": "References",
+        "content": "• Facebook Security Advisory: https://www.facebook.com/security/advisories/cve-2025-55177"
+      }
+    ]
+  }
+},
+{
+  "metadata": {
+    "meta_title": "Google Android Zero-Day (CVE-2025-38352) — Race Condition Enables Local Privilege Escalation",
+    "meta_description": "A critical zero-day (CVE-2025-38352) in Google Android allows local attackers to escalate privileges via a race condition in run_posix_cpu_timers(). Actively exploited — update devices immediately.",
+    "url_slug": "google-android-zero-day-cve-2025-38352-race-condition",
+    "date": "2025-09-02",
+    "primary_keywords": [
+      "CVE-2025-38352",
+      "Google Android zero-day",
+      "Android privilege escalation",
+      "race condition vulnerability",
+      "CWE-362",
+      "Android kernel exploit",
+      "local privilege escalation"
+    ]
+  },
+  "article_content": {
+    "article_title": "Google Android Zero-Day (CVE-2025-38352): Race Condition Vulnerability Actively Exploited",
+    "sections": [
+      {
+        "heading": "Summary",
+        "content": "A **critical zero-day vulnerability (CVE-2025-38352)** affects **Google Android**, allowing **local attackers to escalate privileges** via a **race condition** in the kernel function **run_posix_cpu_timers()**. This vulnerability is actively exploited in the wild and can enable attackers to gain higher privileges on affected devices, potentially compromising sensitive user data and system integrity."
+      },
+      {
+        "heading": "Technical Details",
+        "content": "The flaw occurs due to a **race condition in kernel/time/posix-cpu-timers.c**. A local user can exploit concurrent execution of shared resources to escalate privileges. This vulnerability allows attackers to gain elevated access, bypass normal security restrictions, and perform unauthorized operations on the Android system. Exploitation requires local access, but the impact is critical due to potential system compromise."
+      },
+      {
+        "heading": "CVSS and Severity",
+        "content": "CVSS v3.1 Vector: **CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H/E:H/RL:O/RC:C** — rated **Critical (9.8)**. While the attack requires local access and some privileges, the consequences include full control over the device and access to sensitive information."
+      },
+      {
+        "heading": "Impact",
+        "content": "Successful exploitation can result in **full privilege escalation**, allowing attackers to manipulate system settings, access sensitive files, and deploy persistent malware. This type of vulnerability is particularly dangerous on devices with sensitive personal or corporate data."
+      },
+      {
+        "heading": "Mitigation and Recommendations",
+        "content": "1. **Update Android devices immediately** using the official [Android Security Bulletin](https://source.android.com/docs/security/bulletin/2025-09-01).\n2. **Limit local access** to untrusted users and apps.\n3. **Monitor devices for unusual behavior** or unexpected privilege escalations.\n4. **Enforce strong application sandboxing** and privilege separation policies.\n5. Enterprises should **deploy mobile device management (MDM) solutions** to enforce timely patching and security policies."
+      },
+      {
+        "heading": "References",
+        "content": "Google Android Security Bulletin: https://source.android.com/docs/security/bulletin/2025-09-01"
+      }
+    ]
+  }
+},
+{
+  "metadata": {
+    "meta_title": "Google Android Zero-Day (CVE-2025-48543) — Improper Input Validation Enables Local Code Execution",
+    "meta_description": "A critical zero-day (CVE-2025-48543) in Google Android allows local apps to execute arbitrary code via improper input validation in ART. Actively exploited — update devices immediately.",
+    "url_slug": "google-android-zero-day-cve-2025-48543-art-input-validation",
+    "date": "2025-09-02",
+    "primary_keywords": [
+      "CVE-2025-48543",
+      "Google Android zero-day",
+      "Android local code execution",
+      "ART vulnerability",
+      "Improper input validation",
+      "CWE-20",
+      "Android security update"
+    ]
+  },
+  "article_content": {
+    "article_title": "Google Android Zero-Day (CVE-2025-48543): Improper Input Validation in ART Actively Exploited",
+    "sections": [
+      {
+        "heading": "Summary",
+        "content": "A **critical zero-day vulnerability (CVE-2025-48543)** affects **Google Android**, allowing **local applications to execute arbitrary code** due to **improper input validation** in the **Android Runtime (ART)** component. The vulnerability is **actively exploited in the wild** and can lead to privilege escalation and full device compromise."
+      },
+      {
+        "heading": "Technical Details",
+        "content": "The vulnerability exists within **ART**, the core runtime environment for Android applications. Improper input validation allows a malicious local app to manipulate runtime data and **escalate privileges**, potentially executing arbitrary commands or gaining system-level access. Exploitation requires local access, but the impact is critical as it could compromise sensitive data and system integrity."
+      },
+      {
+        "heading": "CVSS and Severity",
+        "content": "CVSS v3.1 Vector: **CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H/E:H/RL:O/RC:C** — rated **Critical (9.8)**. Local access and privileges are required, but successful exploitation can result in complete control over affected devices."
+      },
+      {
+        "heading": "Impact",
+        "content": "Successful exploitation can lead to **full privilege escalation**, allowing attackers to execute arbitrary code, manipulate applications, access sensitive data, or install persistent malware. The vulnerability is especially concerning on devices used for corporate or financial operations."
+      },
+      {
+        "heading": "Mitigation and Recommendations",
+        "content": "1. **Update Android devices immediately** using the official [Android Security Bulletin](https://source.android.com/docs/security/bulletin/2025-09-01).\n2. **Restrict installation of untrusted apps** and avoid sideloading APKs from unknown sources.\n3. **Enable Play Protect and device integrity checks** to detect malicious behavior.\n4. **Monitor device behavior** for abnormal activity, crashes, or unexpected privilege escalations.\n5. Enterprises should **enforce MDM policies** to ensure timely patch deployment and application vetting."
+      },
+      {
+        "heading": "References",
+        "content": "Google Android Security Bulletin: https://source.android.com/docs/security/bulletin/2025-09-01"
+      }
+    ]
+  }
+},
+{
+  "metadata": {
+    "meta_title": "Sitecore Experience Platform Zero-Day (CVE-2025-53690) — Deserialization Vulnerability Enables Remote Code Execution",
+    "meta_description": "A critical zero-day (CVE-2025-53690) in Sitecore Experience Platform allows remote attackers to execute arbitrary code via deserialization of untrusted data in ViewState. Actively exploited — patch immediately.",
+    "url_slug": "sitecore-xp-zero-day-cve-2025-53690-viewstate-deserialization",
+    "date": "2025-09-04",
+    "primary_keywords": [
+      "CVE-2025-53690",
+      "Sitecore zero-day",
+      "ViewState deserialization",
+      "Remote code execution",
+      "CWE-502",
+      "Sitecore XP vulnerability",
+      "Active Directory integration flaw"
+    ]
+  },
+  "article_content": {
+    "article_title": "Sitecore Experience Platform Zero-Day (CVE-2025-53690): ViewState Deserialization Vulnerability Actively Exploited",
+    "sections": [
+      {
+        "heading": "Summary",
+        "content": "A **critical zero-day vulnerability (CVE-2025-53690)** affects **Sitecore Experience Platform**, enabling **remote attackers to execute arbitrary code** via **deserialization of untrusted data in ViewState**. The flaw is actively exploited in the wild and impacts deployments that used publicly documented sample keys, including **Sitecore XP 9.0 and Active Directory 1.4 and earlier**."
+      },
+      {
+        "heading": "Technical Details",
+        "content": "The vulnerability exists due to **insecure input validation during ViewState deserialization**. Attackers can send specially crafted serialized data that the application incorrectly processes, allowing execution of arbitrary code on the server. Exploitation requires remote access to the web application but no authentication. This makes it highly dangerous for publicly accessible Sitecore deployments."
+      },
+      {
+        "heading": "CVSS and Severity",
+        "content": "CVSS v3.1 Vector: **CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H/E:H/RL:O/RC:C** — rated **Critical (9.8)**. While the attack complexity is high due to the need for crafting serialized data, the potential impact includes full server compromise."
+      },
+      {
+        "heading": "Impact",
+        "content": "Successful exploitation allows attackers to **fully compromise Sitecore servers**, access sensitive user and administrative data, modify content, and potentially pivot to internal networks. Systems using default or publicly known keys are especially at risk."
+      },
+      {
+        "heading": "Mitigation and Recommendations",
+        "content": "1. **Update Sitecore to the latest patched versions** as recommended by Sitecore security advisories.\n2. **Avoid using publicly documented sample keys** for production deployments.\n3. **Restrict external access** to administration and Active Directory integration endpoints.\n4. **Monitor application logs** for suspicious deserialization activity or unexpected requests.\n5. **Implement Web Application Firewall (WAF)** rules to detect and block malicious serialized payloads."
+      },
+      {
+        "heading": "References",
+        "content": "Google Threat Intelligence Advisory: https://cloud.google.com/blog/topics/threat-intelligence/viewstate-deserialization-zero-day-vulnerability"
+      }
+    ]
+  }
+},
+{
+  "metadata": {
+    "meta_title": "Samsung Mobile Firmware Zero-Day (CVE-2025-48543) — Improper Input Validation in ART Enables Local Code Execution",
+    "meta_description": "A critical zero-day (CVE-2025-48543) in Samsung Mobile Firmware allows local apps to execute arbitrary code via improper input validation in ART. Actively exploited — update Samsung devices immediately.",
+    "url_slug": "samsung-mobile-firmware-zero-day-cve-2025-48543-art-input-validation",
+    "date": "2025-09-12",
+    "primary_keywords": [
+      "CVE-2025-48543",
+      "Samsung Mobile zero-day",
+      "Android Runtime vulnerability",
+      "ART improper input validation",
+      "local privilege escalation",
+      "CWE-20",
+      "Samsung security update"
+    ]
+  },
+  "article_content": {
+    "article_title": "Samsung Mobile Firmware Zero-Day (CVE-2025-48543): ART Improper Input Validation Actively Exploited",
+    "sections": [
+      {
+        "heading": "Summary",
+        "content": "A **critical zero-day vulnerability (CVE-2025-48543)** affects **Samsung Mobile Firmware**, allowing **local applications to execute arbitrary code** due to **improper input validation** in the **Android Runtime (ART)** component. The vulnerability is **actively exploited in the wild** and can lead to privilege escalation and full device compromise on affected Samsung devices."
+      },
+      {
+        "heading": "Technical Details",
+        "content": "The flaw exists within **ART**, the core runtime environment for Android applications in Samsung devices. Improper input validation allows a malicious local app to manipulate runtime data and **escalate privileges**, potentially executing arbitrary commands or gaining system-level access. Exploitation requires local access but can result in **complete device compromise**."
+      },
+      {
+        "heading": "CVSS and Severity",
+        "content": "CVSS v3.1 Vector: **CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H/E:H/RL:O/RC:C** — rated **Critical (9.8)**. Although local access is required, the potential impact is severe, including unauthorized code execution and full device control."
+      },
+      {
+        "heading": "Impact",
+        "content": "Successful exploitation allows attackers to **fully escalate privileges**, execute arbitrary code, access sensitive data, manipulate applications, or install persistent malware. Corporate or financial data on affected devices may be at high risk."
+      },
+      {
+        "heading": "Mitigation and Recommendations",
+        "content": "1. **Update Samsung devices immediately** using the official [Samsung Security Update](https://security.samsungmobile.com/securityUpdate.smsb?year=2025&month=09).\n2. **Restrict installation of untrusted apps** and avoid sideloading APKs.\n3. **Enable Knox or device integrity features** to detect and block malicious apps.\n4. **Monitor device behavior** for abnormal activity or privilege escalations.\n5. Enterprises should **enforce mobile device management (MDM) policies** to ensure timely patching and app vetting."
+      },
+      {
+        "heading": "References",
+        "content": "Samsung Security Advisory: https://security.samsungmobile.com/securityUpdate.smsb?year=2025&month=09"
+      }
+    ]
+  }
+},
+{
+  "metadata": {
+    "meta_title": "Google Chrome Zero-Day (CVE-2025-10585) — Type Confusion Vulnerability Actively Exploited",
+    "meta_description": "A critical zero-day (CVE-2025-10585) in Google Chrome allows remote attackers to execute arbitrary code via a type confusion flaw in the V8 engine. Actively exploited — update Chrome immediately.",
+    "url_slug": "google-chrome-zero-day-cve-2025-10585-type-confusion",
+    "date": "2025-09-18",
+    "primary_keywords": [
+      "CVE-2025-10585",
+      "Google Chrome zero-day",
+      "Chrome V8 type confusion",
+      "Remote code execution",
+      "CWE-843",
+      "Chrome security vulnerability",
+      "Browser exploit 2025"
+    ]
+  },
+  "article_content": {
+    "article_title": "Google Chrome Zero-Day (CVE-2025-10585): Type Confusion in V8 Engine Actively Exploited",
+    "sections": [
+      {
+        "heading": "Summary",
+        "content": "A **critical zero-day vulnerability (CVE-2025-10585)** affects **Google Chrome**, allowing **remote attackers to execute arbitrary code** due to a **type confusion error in the V8 JavaScript engine**. The flaw is **actively exploited in the wild** and can result in full system compromise if a user visits a maliciously crafted web page."
+      },
+      {
+        "heading": "Technical Details",
+        "content": "The vulnerability exists within Chrome's **V8 engine** due to **type confusion**, which occurs when the program misinterprets the type of an object in memory. An attacker can craft a malicious webpage that triggers this type confusion when visited by the victim, leading to arbitrary code execution on the target system. Exploitation requires user interaction (visiting the webpage), but no prior authentication."
+      },
+      {
+        "heading": "CVSS and Severity",
+        "content": "CVSS v3.1 Vector: **CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H/E:H/RL:O/RC:C** — rated **Critical (9.8)**. While exploitation requires user interaction, the impact is severe, allowing full control over the affected system."
+      },
+      {
+        "heading": "Impact",
+        "content": "Successful exploitation can result in **remote code execution**, system compromise, theft of sensitive data, installation of malware, and persistent access. The vulnerability is particularly dangerous for users browsing untrusted websites or in high-risk environments."
+      },
+      {
+        "heading": "Mitigation and Recommendations",
+        "content": "1. **Update Google Chrome immediately** to the latest stable version via [Chrome Releases](https://chromereleases.googleblog.com/2025/09/stable-channel-update-for-desktop_17.html).\n2. **Avoid visiting untrusted websites** or clicking suspicious links.\n3. **Enable automatic updates** for Chrome to receive security patches promptly.\n4. Enterprises should **enforce browser security policies** and monitor network traffic for anomalous behavior.\n5. Consider **sandboxing high-risk browsing sessions** to mitigate potential exploits."
+      },
+      {
+        "heading": "References",
+        "content": "Chrome Stable Channel Update: https://chromereleases.googleblog.com/2025/09/stable-channel-update-for-desktop_17.html"
+      }
+    ]
+  }
+},
+{
+  "metadata": {
+    "meta_title": "Libraesva Email Security Gateway Zero-Day (CVE-2025-59689) — OS Command Injection Vulnerability",
+    "meta_description": "A critical zero-day (CVE-2025-59689) in Libraesva Email Security Gateway allows remote attackers to execute arbitrary OS commands via crafted email attachments. Actively exploited — update immediately.",
+    "url_slug": "libraesva-email-security-gateway-zero-day-cve-2025-59689-command-injection",
+    "date": "2025-09-19",
+    "primary_keywords": [
+      "CVE-2025-59689",
+      "Libraesva zero-day",
+      "Email Security Gateway RCE",
+      "OS command injection",
+      "CWE-78",
+      "Remote code execution ESG",
+      "Email attachment exploit"
+    ]
+  },
+  "article_content": {
+    "article_title": "Libraesva Email Security Gateway Zero-Day (CVE-2025-59689): OS Command Injection Actively Exploited",
+    "sections": [
+      {
+        "heading": "Summary",
+        "content": "A **critical zero-day vulnerability (CVE-2025-59689)** affects **Libraesva Email Security Gateway (ESG)**, allowing **remote attackers to execute arbitrary OS commands** via specially crafted email attachments. This vulnerability is **actively exploited in the wild** and can result in full system compromise if successful."
+      },
+      {
+        "heading": "Technical Details",
+        "content": "The vulnerability exists due to **improper input validation when handling archives in email attachments**. A remote attacker can craft a malicious email that triggers **OS command execution** on the server when processed by the ESG. No authentication is required, making this a high-risk attack vector for organizations processing inbound emails."
+      },
+      {
+        "heading": "CVSS and Severity",
+        "content": "CVSS v3.1 Vector: **CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H/E:H/RL:O/RC:C** — rated **Critical (9.8)**. The attack is remotely exploitable and fully compromises confidentiality, integrity, and availability of affected systems."
+      },
+      {
+        "heading": "Impact",
+        "content": "Successful exploitation can lead to **complete server compromise**, allowing attackers to execute arbitrary commands, access sensitive emails, deploy malware, and pivot to internal networks. Organizations relying on ESG for email filtering are at significant risk."
+      },
+      {
+        "heading": "Mitigation and Recommendations",
+        "content": "1. **Apply patches or updates immediately** as per [Libraesva Security Advisory](https://docs.libraesva.com/knowledgebase/security-advisory-command-injection-vulnerability-cve-2025-59689/).\n2. **Scan and block suspicious email attachments** using additional security layers.\n3. **Limit external email processing privileges** on the ESG server.\n4. **Monitor logs** for unusual command execution or system behavior.\n5. **Implement network segmentation** to reduce impact in case of compromise."
+      },
+      {
+        "heading": "References",
+        "content": "Libraesva Security Advisory: https://docs.libraesva.com/knowledgebase/security-advisory-command-injection-vulnerability-cve-2025-59689/"
+      }
+    ]
+  }
+},
+{
+  "metadata": {
+    "meta_title": "Cisco IOS XE Zero-Day (CVE-2025-20352) — SNMP Stack-Based Buffer Overflow",
+    "meta_description": "A critical zero-day (CVE-2025-20352) in Cisco IOS XE allows authenticated users to execute arbitrary code via a stack-based buffer overflow in the SNMP subsystem. Actively exploited — patch immediately.",
+    "url_slug": "cisco-ios-xe-zero-day-cve-2025-20352-snmp-buffer-overflow",
+    "date": "2025-09-24",
+    "primary_keywords": [
+      "CVE-2025-20352",
+      "Cisco IOS XE zero-day",
+      "SNMP stack overflow",
+      "Authenticated remote code execution",
+      "CWE-121",
+      "Cisco SNMP vulnerability",
+      "IOS XE RCE 2025"
+    ]
+  },
+  "article_content": {
+    "article_title": "Cisco IOS XE Zero-Day (CVE-2025-20352): SNMP Stack-Based Buffer Overflow Actively Exploited",
+    "sections": [
+      {
+        "heading": "Summary",
+        "content": "A **critical zero-day vulnerability (CVE-2025-20352)** affects **Cisco IOS XE**, allowing **authenticated remote users** to execute arbitrary code via a **stack-based buffer overflow in the SNMP subsystem**. The vulnerability is **actively exploited in the wild**, and exploitation provides root-level access to the affected device."
+      },
+      {
+        "heading": "Technical Details",
+        "content": "The flaw is a **boundary error within the SNMP subsystem**. An attacker with low-level privileges can send specially crafted SNMP packets to the device, triggering a **stack-based buffer overflow**. This allows execution of arbitrary code with **root privileges**, potentially compromising the entire system. The attack requires authentication but can be executed remotely over the network."
+      },
+      {
+        "heading": "CVSS and Severity",
+        "content": "CVSS v3.1 Vector: **CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H/E:H/RL:O/RC:C** — rated **Critical (9.8)**. The vulnerability impacts Confidentiality, Integrity, and Availability of the device."
+      },
+      {
+        "heading": "Impact",
+        "content": "Successful exploitation allows **full device compromise**, including system-level command execution, network configuration changes, and potential lateral movement within networks. This makes it highly dangerous for enterprises and service providers using vulnerable IOS XE devices."
+      },
+      {
+        "heading": "Mitigation and Recommendations",
+        "content": "1. **Update affected Cisco devices immediately** using [Cisco Security Advisory](https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-snmp-x4LPhte).\n2. **Restrict SNMP access** to trusted networks and administrators.\n3. **Monitor SNMP traffic** for anomalous or unexpected requests.\n4. **Follow Cisco best practices** for device hardening and network segmentation."
+      },
+      {
+        "heading": "References",
+        "content": "Cisco Security Advisory: https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-snmp-x4LPhte"
+      }
+    ]
+  }
+},
+{
+  "metadata": {
+    "meta_title": "Cisco ASA Zero-Day (CVE-2025-20362) — Missing Authorization Vulnerability in VPN Web Server",
+    "meta_description": "A critical zero-day (CVE-2025-20362) in Cisco ASA allows remote attackers to bypass authorization and access restricted URLs via the VPN Web Server. Actively exploited — patch immediately.",
+    "url_slug": "cisco-asa-zero-day-cve-2025-20362-missing-authorization",
+    "date": "2025-09-25",
+    "primary_keywords": [
+      "CVE-2025-20362",
+      "Cisco ASA zero-day",
+      "Missing authorization vulnerability",
+      "VPN Web Server bypass",
+      "CWE-862",
+      "Cisco ASA RCE risk",
+      "FTD VPN security flaw"
+    ]
+  },
+  "article_content": {
+    "article_title": "Cisco ASA Zero-Day (CVE-2025-20362): Missing Authorization in VPN Web Server Actively Exploited",
+    "sections": [
+      {
+        "heading": "Summary",
+        "content": "A **critical zero-day vulnerability (CVE-2025-20362)** affects **Cisco Adaptive Security Appliance (ASA)** and **Firepower Threat Defense (FTD)** devices. The flaw allows a **remote attacker to bypass authorization checks** and access restricted URLs on the VPN Web Server without authentication. The vulnerability is **actively exploited in the wild**."
+      },
+      {
+        "heading": "Technical Details",
+        "content": "The vulnerability exists due to **improper validation of user-supplied input** within the VPN Web Server. An attacker can craft a specially designed HTTP request targeting a restricted resource on the device. This bypasses authentication, potentially exposing sensitive data or administrative interfaces. Exploitation does **not require valid credentials**."
+      },
+      {
+        "heading": "CVSS and Severity",
+        "content": "CVSS v3.1 Vector: **CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:N/E:H/RL:O/RC:C** — rated **High (8.2)**. The vulnerability impacts **confidentiality and integrity** and is exploitable remotely without authentication."
+      },
+      {
+        "heading": "Impact",
+        "content": "Successful exploitation allows attackers to **access restricted areas**, potentially retrieve sensitive data, manipulate VPN configurations, or perform further attacks within the network. While it does not directly allow code execution, the **bypassed authorization can serve as a foothold** for advanced attacks."
+      },
+      {
+        "heading": "Mitigation and Recommendations",
+        "content": "1. **Apply Cisco security updates immediately** as per [Cisco Security Advisory](https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-asaftd-webvpn-YROOTUW).\n2. **Restrict VPN Web Server access** to trusted networks only.\n3. **Monitor network traffic** for anomalous HTTP requests to VPN servers.\n4. **Review and enforce access controls** on all restricted URLs.\n5. **Audit device configurations** regularly to ensure no unauthorized changes were made."
+      },
+      {
+        "heading": "References",
+        "content": "Cisco Security Advisory: https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-asaftd-webvpn-YROOTUW"
+      }
+    ]
+  }
+},
+{
+  "metadata": {
+    "meta_title": "CentreStack Zero-Day (CVE-2025-11371) — Unauthenticated Path Traversal Actively Exploited (Not Patched)",
+    "meta_description": "An unauthenticated path traversal zero-day (CVE-2025-11371) in Gladinet CentreStack allows remote attackers to read arbitrary files. The flaw is actively exploited and, as of the advisory, remains unpatched — apply mitigations immediately.",
+    "url_slug": "centrestack-zero-day-cve-2025-11371-path-traversal",
+    "date": "2025-09-27",
+    "primary_keywords": [
+      "CVE-2025-11371",
+      "CentreStack zero-day",
+      "Gladinet CentreStack path traversal",
+      "CWE-22",
+      "local file inclusion",
+      "CentreStack exploit",
+      "unauthenticated path traversal"
+    ]
+  },
+  "article_content": {
+    "article_title": "Gladinet CentreStack Zero-Day (CVE-2025-11371): Unauthenticated Path Traversal Actively Exploited",
+    "sections": [
+      {
+        "heading": "Summary",
+        "content": "A critical **unauthenticated path traversal** vulnerability (CVE-2025-11371) has been discovered in **Gladinet CentreStack**. An attacker can send specially crafted HTTP requests to read arbitrary files on the server. The flaw is **actively exploited in the wild** and — per the current advisory status — is **not patched**."
+      },
+      {
+        "heading": "Technical Details",
+        "content": "The issue is caused by **insufficient input validation of pathname sequences** (CWE-22) when processing HTTP requests. A remote, unauthenticated attacker can include traversal sequences (for example, `../`) in a request to access files outside the intended document root, resulting in local file disclosure (LFD). Depending on file access and server configuration, disclosed files may include credentials, configuration files, or other sensitive data that enable further compromise."
+      },
+      {
+        "heading": "CVSS Details",
+        "content": "CVSS v3.1 vector: **CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H/E:U/RL:O/RC:C** — indicating a **high-risk network-exploitable** vulnerability that allows confidentiality and integrity impact. The advisory lists the vulnerability as actively exploited."
+      },
+      {
+        "heading": "Affected Components & Conditions",
+        "content": "Vulnerable component: **Gladinet CentreStack** (web-facing file server / sync gateway). Exploitation requires only network access to the vulnerable HTTP endpoint — no authentication is required."
+      },
+      {
+        "heading": "Impact",
+        "content": "Successful exploitation can expose **sensitive files** (configuration, credentials, private keys, user data) and may enable remote attackers to escalate attacks — including remote code execution or lateral movement — depending on what files are disclosed and server configuration."
+      },
+      {
+        "heading": "Patch Status",
+        "content": "As noted in the advisory information provided, the issue is **not patched** at time of publication. Administrators should treat the vulnerability as an active zero-day and implement immediate mitigations until an official patch is available."
+      },
+      {
+        "heading": "Mitigation & Recommendations",
+        "content": "1. **Isolate the service:** Immediately restrict external access to CentreStack HTTP endpoints — place the service behind a VPN or allowlist access only from trusted IPs.  \n2. **WAF / filtering:** Deploy WAF rules to block requests containing path-traversal patterns (e.g., `../`, `%2e%2e`) and abnormal URL encodings.  \n3. **Harden file permissions:** Ensure the web server process only has access to required directories and that sensitive files are not world-readable.  \n4. **Temporary configuration changes:** Disable or limit any features that expose file paths or direct file download endpoints until a patch is available.  \n5. **Monitor & hunt:** Enable verbose request logging and scan logs for suspicious GET/POST requests containing traversal sequences; monitor for unexpected file reads or downloads.  \n6. **Rotate secrets:** If any sensitive files may have been exposed (keys, credentials), rotate them immediately after containment.  \n7. **Network segmentation:** Segment CentreStack from high-value internal resources to reduce blast radius.  \n8. **Apply vendor guidance:** Watch for an official patch or advisory from Gladinet and apply updates as soon as they are released."
+      },
+      {
+        "heading": "References",
+        "content": "Huntress analysis: https://www.huntress.com/blog/gladinet-centrestack-triofox-local-file-inclusion-flaw"
+      }
+    ]
+  }
+},
+{
+  "metadata": {
+    "meta_title": "VMware Tools Zero-Day (CVE-2025-41244) — Local Privilege Escalation Vulnerability",
+    "meta_description": "A critical zero-day (CVE-2025-41244) in VMware Tools allows local users to escalate privileges to superuser via improper access control. Actively exploited since October 2024 — patch immediately.",
+    "url_slug": "vmware-tools-zero-day-cve-2025-41244-privilege-escalation",
+    "date": "2025-09-30",
+    "primary_keywords": [
+      "CVE-2025-41244",
+      "VMware Tools zero-day",
+      "local privilege escalation",
+      "CWE-284",
+      "improper access control",
+      "VMware vulnerability",
+      "VMware superuser exploit"
+    ]
+  },
+  "article_content": {
+    "article_title": "VMware Tools Zero-Day (CVE-2025-41244): Local Privilege Escalation Actively Exploited",
+    "sections": [
+      {
+        "heading": "Summary",
+        "content": "A critical **zero-day vulnerability (CVE-2025-41244)** in **VMware Tools** allows a **local, non-privileged user** to escalate privileges and execute code with **superuser access** on the virtual machine. The vulnerability has been **actively exploited in the wild since mid-October 2024**."
+      },
+      {
+        "heading": "Technical Details",
+        "content": "The flaw exists due to **improper access restrictions** within VMware Tools (CWE-284). A local attacker with limited privileges on the virtual machine can execute arbitrary code, gaining full administrative rights. Exploitation does not require remote access but affects any user with access to the VM."
+      },
+      {
+        "heading": "CVSS and Severity",
+        "content": "CVSS v3.1 vector: **CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H/E:H/RL:O/RC:C** — rated **Critical (9.8)**. The vulnerability compromises confidentiality, integrity, and availability of the VM."
+      },
+      {
+        "heading": "Impact",
+        "content": "Successful exploitation allows attackers to gain **root privileges**, install malware, modify system configurations, exfiltrate sensitive data, or pivot to other VMs in the environment. This poses a severe risk for virtualized infrastructures in enterprises."
+      },
+      {
+        "heading": "Mitigation and Recommendations",
+        "content": "1. **Update VMware Tools immediately** following vendor guidance.\n2. **Limit local user access** on VMs and remove unnecessary administrative rights.\n3. **Monitor VM logs** for suspicious privilege escalation attempts.\n4. **Isolate affected VMs** until patches are applied.\n5. **Review security policies** for virtualized environments to reduce exposure to local exploits.\n6. **Apply host-level hardening** to prevent unauthorized users from installing or modifying VMware Tools."
+      },
+      {
+        "heading": "References",
+        "content": "NVISO Blog: https://blog.nviso.eu/2025/09/29/you-name-it-vmware-elevates-it-cve-2025-41244/  \nBroadcom Security Advisory: https://support.broadcom.com/web/ecx/support-content-notification/-/external/content/SecurityAdvisor"
+      }
+    ]
+  }
+},
+{
+  "metadata": {
+    "meta_title": "Oracle E-Business Suite Zero-Day (CVE-2025-61884) — SSRF Vulnerability in Configurator UI",
+    "meta_description": "A zero-day (CVE-2025-61884) in Oracle E-Business Suite allows remote attackers to perform SSRF attacks via the Configurator Runtime UI. Exploitation may lead to sensitive data access and lateral network attacks.",
+    "url_slug": "oracle-ebs-zero-day-cve-2025-61884-ssrf",
+    "date": "2025-10-12",
+    "primary_keywords": [
+      "CVE-2025-61884",
+      "Oracle E-Business Suite SSRF",
+      "Configurator Runtime UI vulnerability",
+      "Server-Side Request Forgery",
+      "CWE-918",
+      "Oracle zero-day",
+      "Oracle EBS information disclosure"
+    ]
+  },
+  "article_content": {
+    "article_title": "Oracle E-Business Suite Zero-Day (CVE-2025-61884): SSRF Vulnerability in Configurator UI Actively Exploited",
+    "sections": [
+      {
+        "heading": "Summary",
+        "content": "A critical **zero-day vulnerability (CVE-2025-61884)** affects **Oracle E-Business Suite** Configurator Runtime UI. The flaw allows a **remote attacker to perform Server-Side Request Forgery (SSRF)** attacks, potentially accessing sensitive internal data or sending malicious requests from the vulnerable system. The vulnerability is **actively exploitable**."
+      },
+      {
+        "heading": "Technical Details",
+        "content": "The vulnerability exists due to **insufficient validation of user-supplied input** in Oracle Configurator Runtime UI (CWE-918). A remote attacker can craft a specially designed HTTP request that forces the application to make requests to arbitrary internal or external systems. This can lead to **data exfiltration**, **information disclosure**, or use of the vulnerable system as a pivot point for further attacks within the internal network."
+      },
+      {
+        "heading": "CVSS and Severity",
+        "content": "CVSS v3.1 Vector: **CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:L/A:N/E:H/RL:O/RC:C** — rated **High**, with a **Confidentiality impact** on sensitive data. The vulnerability is remotely exploitable without authentication."
+      },
+      {
+        "heading": "Impact",
+        "content": "Successful exploitation allows attackers to:\n- Retrieve sensitive data located on internal network resources.\n- Send crafted requests to internal or external servers.\n- Potentially use the vulnerable system as a **launchpad for lateral attacks** within the corporate network."
+      },
+      {
+        "heading": "Mitigation and Recommendations",
+        "content": "1. **Apply Oracle security updates immediately** as per [Oracle Security Advisory](https://www.oracle.com/security-alerts/alert-cve-2025-61884.html).\n2. **Restrict network access** to Oracle Configurator UI to trusted IP addresses.\n3. **Monitor server logs** for suspicious outbound HTTP requests.\n4. **Implement network segmentation** to limit potential lateral movement from compromised systems.\n5. **Validate input and implement WAF rules** to block SSRF-like patterns in requests until patches are applied."
+      },
+      {
+        "heading": "References",
+        "content": "Oracle Security Alert: https://www.oracle.com/security-alerts/alert-cve-2025-61884.html"
+      }
+    ]
+  }
+},
+{
+  "metadata": {
+    "meta_title": "Windows Zero-Day (CVE-2025-24990) — Privilege Escalation in Agere Modem Driver",
+    "meta_description": "A critical zero-day (CVE-2025-24990) in Windows allows local users to escalate privileges via untrusted pointer dereference in the Agere Modem driver (ltmdm64.sys). Actively exploited in the wild — apply mitigation immediately.",
+    "url_slug": "windows-zero-day-cve-2025-24990-agere-modem-driver",
+    "date": "2025-10-14",
+    "primary_keywords": [
+      "CVE-2025-24990",
+      "Windows zero-day",
+      "Agere Modem driver vulnerability",
+      "Privilege escalation Windows",
+      "CWE-822",
+      "ltmdm64.sys exploit",
+      "local privilege escalation"
+    ]
+  },
+  "article_content": {
+    "article_title": "Windows Zero-Day (CVE-2025-24990): Privilege Escalation via Agere Modem Driver",
+    "sections": [
+      {
+        "heading": "Summary",
+        "content": "A critical **zero-day vulnerability (CVE-2025-24990)** exists in **Windows** Agere Modem driver (ltmdm64.sys). The flaw allows a **local attacker to escalate privileges** by exploiting **untrusted pointer dereference**, enabling execution of arbitrary code with elevated privileges. The vulnerability is **actively exploited in the wild**."
+      },
+      {
+        "heading": "Technical Details",
+        "content": "The vulnerability occurs due to **untrusted pointer dereference** in the third-party Agere Modem driver shipped with supported Windows operating systems (CWE-822). A local user can craft input to the driver to overwrite memory pointers, gain control over execution flow, and execute arbitrary code with **SYSTEM-level privileges**."
+      },
+      {
+        "heading": "CVSS and Severity",
+        "content": "CVSS v3.1 Vector: **CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H/E:H/RL:O/RC:C** — rated **Critical**, reflecting complete compromise potential of confidentiality, integrity, and availability. Exploitation requires local access but results in full privilege escalation."
+      },
+      {
+        "heading": "Impact",
+        "content": "Successful exploitation allows attackers to:\n- Gain **SYSTEM-level privileges** on the affected Windows machine.\n- Install malware or rootkits with full system access.\n- Modify sensitive configurations or exfiltrate data.\n- Potentially pivot to other machines in the network if lateral movement is possible."
+      },
+      {
+        "heading": "Mitigation and Recommendations",
+        "content": "1. **Apply official Microsoft updates immediately** as they are released.  \n2. **Restrict local access** to untrusted users or accounts.  \n3. **Enable endpoint protection** and monitor for suspicious activities related to ltmdm64.sys.  \n4. **Audit privilege accounts** and disable unnecessary local administrator rights.  \n5. **Consider temporary workarounds** such as disabling the affected driver if feasible, until a patch is applied."
+      },
+      {
+        "heading": "References",
+        "content": "Microsoft Security Advisory: https://msrc.microsoft.com/update-guide/en-US/advisory/CVE-2025-24990"
+      }
+    ]
+  }
+},
+{
+  "metadata": {
+    "meta_title": "Windows Zero-Day (CVE-2025-59230) — Privilege Escalation in Remote Access Connection Manager",
+    "meta_description": "A critical zero-day (CVE-2025-59230) in Windows Remote Access Connection Manager allows local users to escalate privileges via improper access control. Actively exploited — patch immediately.",
+    "url_slug": "windows-zero-day-cve-2025-59230-remote-access-connection-manager",
+    "date": "2025-10-14",
+    "primary_keywords": [
+      "CVE-2025-59230",
+      "Windows zero-day",
+      "Remote Access Connection Manager",
+      "Privilege escalation Windows",
+      "CWE-284",
+      "improper access control",
+      "local privilege escalation"
+    ]
+  },
+  "article_content": {
+    "article_title": "Windows Zero-Day (CVE-2025-59230): Privilege Escalation via Remote Access Connection Manager",
+    "sections": [
+      {
+        "heading": "Summary",
+        "content": "A critical **zero-day vulnerability (CVE-2025-59230)** affects **Windows Remote Access Connection Manager**, allowing a **local user to escalate privileges** and execute arbitrary code with **SYSTEM-level access**. The flaw is **actively exploited in the wild**."
+      },
+      {
+        "heading": "Technical Details",
+        "content": "The vulnerability exists due to **improper access restrictions** in the Remote Access Connection Manager component (CWE-284). A local attacker with limited privileges can bypass security checks, gaining full control over the system and executing arbitrary code with elevated privileges."
+      },
+      {
+        "heading": "CVSS and Severity",
+        "content": "CVSS v3.1 Vector: **CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H/E:H/RL:O/RC:C** — rated **Critical**, reflecting full impact on confidentiality, integrity, and availability. Exploitation requires local access but leads to full system compromise."
+      },
+      {
+        "heading": "Impact",
+        "content": "Successful exploitation allows attackers to:\n- Gain **SYSTEM-level privileges**.\n- Install malware, rootkits, or malicious scripts.\n- Modify critical system configurations or exfiltrate sensitive data.\n- Potentially pivot to other systems within the network."
+      },
+      {
+        "heading": "Mitigation and Recommendations",
+        "content": "1. **Apply Microsoft updates immediately** as they are released.  \n2. **Restrict local administrative access** to trusted users.  \n3. **Monitor for suspicious activity** involving Remote Access Connection Manager.  \n4. **Audit and limit accounts** with elevated privileges.  \n5. **Consider temporary workarounds** such as disabling the service if feasible until a patch is applied."
+      },
+      {
+        "heading": "References",
+        "content": "Microsoft Security Advisory: https://msrc.microsoft.com/update-guide/en-US/advisory/CVE-2025-59230"
+      }
+    ]
+  }
+},
+{
+  "metadata": {
+    "meta_title": "Windows Zero-Day (CVE-2025-47827) — Secure Boot Bypass via IGEL OS",
+    "meta_description": "A zero-day (CVE-2025-47827) in Windows IGEL OS allows attackers with physical access to bypass Secure Boot using improper verification of cryptographic signatures. Actively exploited — immediate mitigation recommended.",
+    "url_slug": "windows-zero-day-cve-2025-47827-igel-os-secure-boot-bypass",
+    "date": "2025-10-14",
+    "primary_keywords": [
+      "CVE-2025-47827",
+      "Windows zero-day",
+      "IGEL OS Secure Boot bypass",
+      "Improper cryptographic verification",
+      "CWE-347",
+      "physical access attack Windows",
+      "Secure Boot vulnerability"
+    ]
+  },
+  "article_content": {
+    "article_title": "Windows Zero-Day (CVE-2025-47827): IGEL OS Secure Boot Bypass Vulnerability",
+    "sections": [
+      {
+        "heading": "Summary",
+        "content": "A critical **zero-day vulnerability (CVE-2025-47827)** affects **Windows systems using IGEL OS**, allowing an attacker with **physical access** to bypass Secure Boot protections. The flaw is due to **improper verification of cryptographic signatures** when mounting SquashFS images, enabling full system compromise. This vulnerability is **actively exploited in the wild**."
+      },
+      {
+        "heading": "Technical Details",
+        "content": "The vulnerability occurs because IGEL OS firmware does not correctly verify cryptographic signatures of SquashFS images (CWE-347). An attacker with physical access can supply a maliciously crafted image to bypass Secure Boot, effectively compromising the integrity of the boot process and gaining control over the system."
+      },
+      {
+        "heading": "CVSS and Severity",
+        "content": "CVSS v3.1 Vector: **CVSS:3.1/AV:P/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H/E:H/RL:O/RC:C** — rated **Critical**, with full impact on confidentiality, integrity, and availability. Exploitation requires physical access but allows complete system compromise."
+      },
+      {
+        "heading": "Impact",
+        "content": "Successful exploitation allows attackers to:\n- Bypass **Secure Boot protections**.\n- Execute arbitrary code at boot time.\n- Compromise system integrity and confidentiality.\n- Potentially install persistent malware or rootkits."
+      },
+      {
+        "heading": "Mitigation and Recommendations",
+        "content": "1. **Apply official Microsoft and IGEL OS updates** immediately.  \n2. **Restrict physical access** to critical systems.  \n3. **Enable hardware-based security features** such as TPM and BitLocker where possible.  \n4. **Monitor system boot logs** for suspicious activity.  \n5. **Implement device hardening policies** to prevent unauthorized firmware modification."
+      },
+      {
+        "heading": "References",
+        "content": "Microsoft Security Advisory: https://msrc.microsoft.com/update-guide/en-US/advisory/CVE-2025-47827"
+      }
+    ]
+  }
+}
+]
