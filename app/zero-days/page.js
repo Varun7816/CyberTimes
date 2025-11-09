@@ -1,6 +1,6 @@
 "use client";
 
-import zeroDays from "@/data/zero-days.json";
+import zeroDays from "../../data/zero-days.json";
 import Link from "next/link";
 
 import React, { useState } from "react";

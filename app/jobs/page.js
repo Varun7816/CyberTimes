@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import jobs from "@/data/jobs.json";
+import jobs from "../../data/jobs.json";
 
 import React, { useMemo, useState } from "react";
 function parseDateDMY(s) {

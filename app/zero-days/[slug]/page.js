@@ -1,4 +1,4 @@
-import zeroDays from "@/data/zero-days.json";
+import zeroDays from "../../../data/zero-days.json";
 import Link from "next/link";
 
 export function generateStaticParams() {

@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import vulnerabilitiesData from "@/data/vulnerabilities.json";
+import vulnerabilitiesData from "../../data/vulnerabilities.json";
 
 import React, { useState } from "react";
 const validVulns = Array.isArray(vulnerabilitiesData)

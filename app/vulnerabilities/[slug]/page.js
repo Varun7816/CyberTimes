@@ -1,4 +1,4 @@
-import vulnerabilities from "@/data/vulnerabilities.json";
+import vulnerabilities from "../../../data/vulnerabilities.json";
 import Link from "next/link";
 
 export function generateStaticParams() {
