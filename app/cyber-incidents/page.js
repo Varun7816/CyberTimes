@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import rawIncidents from "@/Data/cyber-incidents.json";
+import rawIncidents from "@/data/cyber-incidents.json";
 
 import React, { useMemo, useState } from "react";
 function formatDate(dateStr) {

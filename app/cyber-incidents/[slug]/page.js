@@ -1,6 +1,6 @@
 import { notFound } from "next/navigation";
 import Link from "next/link";
-import incidents from "@/Data/cyber-incidents.json"; // ensure path/casing matches your project
+import incidents from "@/data/cyber-incidents.json"; // ensure path/casing matches your project
 
 function formatDate(dateStr) {
   if (!dateStr) return "";
