@@ -1,6 +1,7 @@
 import "./globals.css";
 import Header from "../components/Header";
 import ComingSoonProvider from "../components/ComingSoonProvider";
+import { Analytics } from "@vercel/analytics/next";
 
 export default function RootLayout({ children }) {
   return (
@@ -9,6 +10,7 @@ export default function RootLayout({ children }) {
         <ComingSoonProvider>
           <Header />
           {children}
+          <Analytics />
         </ComingSoonProvider>
       </body>
     </html>
